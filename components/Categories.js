@@ -8,11 +8,11 @@ function Categories({ categories }) {
             <div className='px-4 mt-10'>
                 {categories.map(category => {
                     return (
-                        <div>
+                        <div key={category.id}>
                             <h1 className=' bg-yellow-100 text-xl text-center py-2'>{locale === 'en-US' ? category.name_json.english : category.name_json.german}</h1>
                             {category.products.map(product => {
                                 return (
-                                    <div className='my-5 p-5 border-t border-gray-200 flex items-center justify-between transition duration-200 hover:shadow-lg cursor-pointer'>
+                                    <div key={product.id} className='my-5 p-5 border-t border-gray-200 flex items-center justify-between transition duration-200 hover:shadow-lg cursor-pointer'>
                                         <div className='w-8/12'>
                                             <h4 className='font-bold'>{locale === 'en-US' ? product.name_json.english : product.name_json.german}</h4>
                                             <p className='text-sm'>{locale === 'en-US' ? product.description_json.english : product.name_json.german}</p>

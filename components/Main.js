@@ -19,7 +19,7 @@ function Main({ categories }) {
 
                         {categories.map(category => {
                             return (
-                                <ul className='appearance-none flex lg:flex-col mr-2 mt-4'>
+                                <ul key={category.id} className='appearance-none flex lg:flex-col mr-2 mt-4'>
                                     <li className='flex lg:justify-end '><a className='curson-pointer active:active-dropdown'>{locale === 'en-US' ? category.name_json.english : category.name_json.german}</a></li>
                                 </ul>
                             )
