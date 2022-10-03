@@ -8,7 +8,7 @@ function Header() {
 
     return (
         <header className='sticky top-0 z-30 bg-white shadow-md'>
-            <div className='hidden lg:flex justify-between pt-4 pb-3 md:max-w-4xl lg:max-w-6xl xl:max-w-7xl mx-auto'>
+            <div className='hidden lg:flex justify-between pt-4 pb-3 md:max-w-4xl lg:max-w-5xl xl:max-w-6xl 2xl:max-w-7xl mx-auto'>
                 <div className='relative h-12 w-12'>
                     <Image src='/icon.webp' layout='fill' />
                 </div>
