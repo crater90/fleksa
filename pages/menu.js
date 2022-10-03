@@ -2,11 +2,9 @@ import React from 'react'
 import Header from '../components/Header'
 import Hero from '../components/Hero'
 import Main from '../components/Main'
-import { useRouter } from 'next/router'
 import Footer from '../components/Footer'
 
 function menu({ data }) {
-    const { locale, asPath } = useRouter();
 
     return (
         <div className='h-screen overflow-y-scroll'>
