@@ -9,7 +9,7 @@ function Main({ categories }) {
         <div className=''>
             <div className='grid grid-cols-1 lg:grid-cols-12 md:max-w-4xl lg:max-w-6xl xl:max-w-7xl mx-auto'>
                 <div className='col-span-3'>
-                    <div className='hidden lg:inline sticky top-20 mt-10 h-[80vh] overflow-y-auto'>
+                    <div className='hidden lg:flex flex-col sticky top-20 mt-10 h-[80vh] overflow-y-scroll'>
                         <div className='mt-5 flex items-center border-2 border-black'>
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 p-0.5">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
@@ -20,7 +20,7 @@ function Main({ categories }) {
                         {categories.map(category => {
                             return (
                                 <ul key={category.id} className='appearance-none flex lg:flex-col mr-2 mt-4'>
-                                    <li className='flex lg:justify-end '><a className='curson-pointer active:active-dropdown'>{locale === 'en-US' ? category.name_json.english : category.name_json.german}</a></li>
+                                    <li className='flex cursor-pointer lg:justify-end '><a className=' active:active-dropdown'>{locale === 'en-US' ? category.name_json.english : category.name_json.german}</a></li>
                                 </ul>
                             )
                         })}
